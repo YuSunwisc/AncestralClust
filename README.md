@@ -1,10 +1,16 @@
-# Phylo563_FinalProject: Clustering with less samples(Yu Sun, 04.09.2021)
+# MainReadme: AncestralClust Alg
+	Author: Yu Sun
+    Last update 2021.04.30
+    Github: https://github.com/YuSunwisc/Phylo563_FinalProject
+    Contact: ysun258@wisc.edu
 ## 1.Introduction
 
-This project is going to do a simulation about ancestral sequence reconstruction with less randomly selected samples. It's well known that clustering is a fundamental task in the analysis of nucleotide sequences, and traditional clustering methods have mostly focused on optimizing high speed clustering of highly similar sequences, but state-of-art clustering method starting with less samples may also led to a good result. But our recent analysis shows that, on some simplified models, there is a chance that this method could be wrong--some nucleotide sequences will be assigned into wrong groups. 
-I'll focus on two aspects: for a fixed dataset, I will try to show when this method is working and when it gives a unreliable clusters.
+This project is going to do a simulation about ancestral sequence reconstruction with less randomly selected samples. It's well known that clustering is a fundamental task in the analysis of nucleotide sequences, and traditional clustering methods have mostly focused on optimizing high speed clustering of highly similar sequences, but state-of-art clustering method starting with less samples may also led to a good result. There we're going to run an "homemade" version of AncestralClust alg with ssRNA data.
 
-## 2. AncestralClust
+## 2. Content
+This repository contains 3 folders [script](script), [data](data) and [graphs](graphs), with two report files [report.md](report.md) and [report.html](report.html). Please direct to [script](script) and run all the scripts by step by step instruction in [report.md](report.md). The final reslut of cluster members are in [data/final_clust](data/final_clust) folder. All detailed questions please check readme file in each folder.
+
+## 3. About AncestralClust(from original paper)
 - Step 1: With total number of N nucleotide sequences, choose a relatively small fraction of it(i.e. k=3%N), and use wavefront alforithm to do pairwise alignment.
 
 - Step 2: Use distance method to construct the tree structure: here we use Jukes-Cantor model with neighbor-joining algorithm for our instance.
@@ -21,9 +27,12 @@ I'll focus on two aspects: for a fixed dataset, I will try to show when this met
 
 - Step 8: In each iteration after the first iteration, a cut of a branch in the phylogenetic tree is chosen if the the branch is longer that the average length of branches cut in the first iteration.
 
-## 3. MAP estimator result
-In our unpubilshed proof, we find some extreme cases that the unsampled sequence tends to have stronger correlation with the "wrong root", which leads to the wrong clustering. Here we're going to choose a fixed set of samples that gives, both good and bad clusters.
 
-## 4. Dataset
 
-Current dataset we choose comes from : 6, 18S, and Cytochrome Oxidase I (COI)) from the CALeDNA project Meyer.
+
+
+
+
+
+
+
